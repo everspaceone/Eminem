@@ -1,0 +1,190 @@
+.go{
+    margin: 10px;
+    & .container{
+        position: relative;
+        padding: 0;
+        overflow: hidden;
+    }
+    &-block{
+        width: 100%;
+        padding: 18px 19px 21px 34px;
+        border: 1px solid #3A444E;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        transition: 0.3s;
+        &.active{
+            background-image: url(../../images/bg.jpg);
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-position-y: center;
+            height: 400px;
+            box-shadow: 5px 15px 40px rgba(6, 6, 6, 0.32);
+            border-radius: 20px;
+            & .go-subtitle{
+                color: $gold;
+                &::after{
+                    content: "\f0aa";
+                    color: $gold;
+                }
+            }
+            & .go-box{
+                display: block;
+            }
+        }
+    }
+    &-subtitle{
+        color: #090909;
+        font-weight: 700;
+        font-size: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        &::after{
+            content: "\f0a9";
+            font-size: 26px;
+        }
+    }
+    &-box{
+        background: rgb(173, 11, 11);
+        width: 100%;
+        position: relative;
+        display: none;
+        margin-top: 270px;
+        border-radius: 20%;
+    }
+    &-title{
+        text-align: center;
+        color: $white;
+        font-size: 25px;
+    }
+    &__speed-watch{
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%,50%);
+        font-size: 35px;
+        font-weight: 500;
+        width: 100%;
+        height: 100px;
+        border-radius: 50%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.5);
+        color: #fff;
+    }
+    &-media{
+        display: flex;
+        & i{
+            color: #fff;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 0 5px;
+            &:hover{
+                color: $gold;
+            }
+        }
+    }
+    &-controls{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 10px;
+    }
+    &__prev{
+        &::after{
+            content: "\f0d9";
+        }
+    }
+    &__play{
+        &::after{
+            content: "\f04b";
+        }
+        &.active{
+            &::after{
+                content: "\f04c";
+            }
+        }
+    }
+    &__next{
+        &::after{
+            content: "\f0da";
+        }
+    }
+    &-progress{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-grow: 1;
+        margin: 0 10px;
+    }
+    &-time{
+        font-size: 20px;
+        color: #fff;
+        width: 75px;
+        text-align: center;
+        @include media(700){
+            width: 50px;
+            font-size: 15px;
+        }
+    }
+    &-duration{
+        flex-grow: 1;
+        height: 5px;
+        background: #fff;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    &-line{
+        height: 100%;
+        width: 0%;
+        background: $gold;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &-ruler{
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background: $gold;
+    }
+    &-volume{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+    }
+    &__volume-icon{
+        color: #fff;
+        font-size: 20px;
+        width: 25px;
+        margin-right: 10px;
+        &.mute{
+            &::after{
+                content: "\f2e2";
+            }
+        }
+        &.off{
+            &::after{
+                content: "\f026";
+            }
+        }
+        &.down{
+            &::after{
+                content: "\f027";
+            }
+        }
+        &.normal{
+            &::after{
+                content: "\f6a8";
+            }
+        }
+        &.up{
+            &::after{
+                content: "\f028";
+            }
+        }
+    }
+}

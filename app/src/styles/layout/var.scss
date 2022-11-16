@@ -1,0 +1,11 @@
+$white:#fff;
+$gold:#E58D35;
+$green:#89C249;
+$gray:#363A4D;
+
+@mixin media($size) {
+    @media(max-width:#{$size}px){
+        @content
+
+    }
+}
