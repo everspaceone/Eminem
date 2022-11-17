@@ -51,27 +51,17 @@
         display: none;
         margin-top: 270px;
         border-radius: 20%;
+        @include media(512){
+            margin-top: 200px;
+        }
     }
     &-title{
         text-align: center;
         color: $white;
         font-size: 25px;
-    }
-    &__speed-watch{
-        position: absolute;
-        top: 40%;
-        left: 50%;
-        transform: translate(-50%,50%);
-        font-size: 35px;
-        font-weight: 500;
-        width: 100%;
-        height: 100px;
-        border-radius: 50%;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        background: rgba(0, 0, 0, 0.5);
-        color: #fff;
+        @include media(512){
+            font-size: 15px;
+        }
     }
     &-media{
         display: flex;
@@ -91,6 +81,9 @@
         justify-content: center;
         color: #fff;
         padding: 10px;
+        @include media(512){
+            padding: 0;
+        }
     }
     &__prev{
         &::after{
@@ -118,15 +111,18 @@
         align-items: center;
         flex-grow: 1;
         margin: 0 10px;
+        @include media(512){
+            margin: 0 5px;
+        }
     }
     &-time{
         font-size: 20px;
         color: #fff;
         width: 75px;
         text-align: center;
-        @include media(700){
-            width: 50px;
-            font-size: 15px;
+        @include media(512){
+            width: 30px;
+            font-size: 10px;
         }
     }
     &-duration{
@@ -155,12 +151,24 @@
         align-items: center;
         justify-content: center;
         padding: 10px;
+        @include media(512){
+            padding: 5px;
+        }
+        & input{
+            @include media(512){
+                width: 90px;
+            }
+        }
     }
     &__volume-icon{
         color: #fff;
         font-size: 20px;
         width: 25px;
         margin-right: 10px;
+        @include media(512){
+            font-size: 15px;
+            margin-right: 5px;
+        }
         &.mute{
             &::after{
                 content: "\f2e2";
