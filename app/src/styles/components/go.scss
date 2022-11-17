@@ -156,7 +156,7 @@
         }
         & input{
             @include media(512){
-                width: 90px;
+                display: none;
             }
         }
     }
@@ -168,6 +168,7 @@
         @include media(512){
             font-size: 15px;
             margin-right: 5px;
+            display: none;
         }
         &.mute{
             &::after{
